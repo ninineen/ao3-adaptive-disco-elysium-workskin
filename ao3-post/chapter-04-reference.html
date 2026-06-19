@@ -51,14 +51,17 @@
 
 <h3>Speaker Label — <code>de-speaker</code></h3>
 
-<p>For named characters. Bold, uppercase, neutral gray.</p>
+<p>For named characters. Bold, uppercase. Three variants:</p>
 
-<p class="de-convo"><span class="de-speaker">YOU</span> — Example speaker line.</p>
-<p class="de-convo"><span class="de-speaker">KIM KITSURAGI</span> — Example speaker line.</p>
+<p class="de-convo"><span class="de-speaker">KIM KITSURAGI</span> — <code>de-speaker</code> — NPC / named character (neutral gray).</p>
+<p class="de-convo"><span class="de-speaker you">YOU</span> — <code>de-speaker you</code> — Player character (warm off-white).</p>
+<p class="de-convo"><span class="de-speaker thing">THE NOTICE BOARD</span> — <code>de-speaker thing</code> — Object, item, or sign (sage green).</p>
 
 <details>
 <summary>HTML</summary>
-<pre><code>&lt;span class="de-speaker"&gt;YOU&lt;/span&gt;</code></pre>
+<pre><code>&lt;span class="de-speaker"&gt;KIM KITSURAGI&lt;/span&gt;
+&lt;span class="de-speaker you"&gt;YOU&lt;/span&gt;
+&lt;span class="de-speaker thing"&gt;THE NOTICE BOARD&lt;/span&gt;</code></pre>
 </details>
 
 <hr />
@@ -147,6 +150,32 @@
 
 <hr />
 
+<h3>Task Complete — <code>p class="de-task-complete"</code></h3>
+
+<p>Bold green line for quest/task completion notices.</p>
+
+<p class="de-task-complete">Task complete: Some task, or quest, has been finished.</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-task-complete"&gt;Task complete: Your task name here.&lt;/p&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Continue Button — <code>p class="de-continue"</code></h3>
+
+<p>Full-width dark red bar. Use at scene or chapter breaks.</p>
+
+<p class="de-continue"><span>CONTINUE ►</span></p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-continue"&gt;&lt;span&gt;CONTINUE ►&lt;/span&gt;&lt;/p&gt;</code></pre>
+</details>
+
+<hr />
+
 <h3>Alert Banners — <code>p class="de-alert [type]"</code></h3>
 
 <p class="de-alert thought">
@@ -182,6 +211,11 @@
 <p class="de-alert failure">
   <span>Check Failed</span>
   <span>failure</span>
+</p>
+
+<p class="de-alert item">
+  <span>Item Gained</span>
+  <span>item</span>
 </p>
 
 <details>

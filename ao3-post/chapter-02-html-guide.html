@@ -21,6 +21,11 @@
   <span>+1</span>
 </p>
 
+<p class="de-alert item">
+  <span>Item Gained</span>
+  <span>Key to Room #1</span>
+</p>
+
 <details>
 <summary>HTML</summary>
 <pre><code>&lt;p class="de-alert thought"&gt;
@@ -48,6 +53,14 @@
 </p>
 
 <p class="de-convo">
+  <span class="de-speaker you">YOU</span> — Add <code>class="you"</code> to give the player character a distinct colour.
+</p>
+
+<p class="de-convo">
+  <span class="de-speaker thing">THE STORM DRAIN</span> — Add <code>class="thing"</code> for objects, signs, items, or any non-character label.
+</p>
+
+<p class="de-convo">
   <span class="de-skill electrochemistry">ELECTROCHEMISTRY</span>
   <span class="de-check success">[Medium: Success]</span> — But look at it! The strange, iridescent film resting on top of the liquid promises a kaleidoscope of illicit thrills. Just a little sip. It will make you feel like a god.
 </p>
@@ -66,6 +79,16 @@
 <pre><code>&lt;!-- Named character speaking --&gt;
 &lt;p class="de-convo"&gt;
   &lt;span class="de-speaker"&gt;KIM KITSURAGI&lt;/span&gt; — "Detective, I highly advise against drinking from a thermos you found inside a rusted storm drain."
+&lt;/p&gt;
+
+&lt;!-- Player character (YOU) --&gt;
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-speaker you"&gt;YOU&lt;/span&gt; — "Your line here."
+&lt;/p&gt;
+
+&lt;!-- Object / item / sign --&gt;
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-speaker thing"&gt;THE NOTICE BOARD&lt;/span&gt; — Your text here.
 &lt;/p&gt;
 
 &lt;!-- Skill check with result --&gt;
@@ -105,6 +128,28 @@
 &lt;/ol&gt;</code></pre>
 </details>
 
+<h3>Task Complete</h3>
+
+<p>A single bold green line. Use it for quest/task completion notices.</p>
+
+<p class="de-task-complete">Task complete: Check out the Disco Days workskin.</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-task-complete"&gt;Task complete: Your task name here.&lt;/p&gt;</code></pre>
+</details>
+
+<h3>Continue Button</h3>
+
+<p>A full-width dark red bar. Put it at the end of a scene or chapter break.</p>
+
+<p class="de-continue"><span>CONTINUE ►</span></p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-continue"&gt;&lt;span&gt;CONTINUE ►&lt;/span&gt;&lt;/p&gt;</code></pre>
+</details>
+
 <h3>Full Example Scene</h3>
 
 <p>All elements together, in order, as they would appear in a chapter.</p>
@@ -132,7 +177,7 @@
 &lt;/ol&gt;
 
 &lt;p class="de-convo"&gt;
-  &lt;span class="de-speaker"&gt;YOU&lt;/span&gt; — "It has been aging like a fine wine, Kim. The city has fermented it just for me." You uncap the vessel and take a deep, desperate gulp.
+  &lt;span class="de-speaker you"&gt;YOU&lt;/span&gt; — "It has been aging like a fine wine, Kim. The city has fermented it just for me." You uncap the vessel and take a deep, desperate gulp.
 &lt;/p&gt;
 
 &lt;p class="de-alert health-down"&gt;

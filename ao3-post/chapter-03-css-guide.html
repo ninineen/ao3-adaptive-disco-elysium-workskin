@@ -23,6 +23,16 @@
     color: #6B7280; /* Neutral mid-gray, works in light and dark mode */
 }
 
+/* YOU (player character) */
+#workskin .de-speaker.you {
+    color: #D4C5A9;
+}
+
+/* Generic object / item / sign */
+#workskin .de-speaker.thing {
+    color: #8BAF9A;
+}
+
 /* --- INTELLECT SKILLS --- */
 #workskin .de-skill.logic              { color: #2A7B9B; }
 #workskin .de-skill.encyclopedia       { color: #3B888C; }
@@ -96,8 +106,8 @@
 }
 
 #workskin ol.de-choices li.old {
-    color: #8D3200;
-    opacity: 0.7;
+    color: #C47A52;
+    opacity: 0.8;
 }
 
 /* --- UI Alerts --- */
@@ -131,5 +141,35 @@
 #workskin p.de-alert.morale-up > span   { background: #1E88E5; }
 #workskin p.de-alert.morale-down > span { background: #7B1FA2; }
 #workskin p.de-alert.success > span     { background: #109352; }
-#workskin p.de-alert.failure > span     { background: #D32F2F; }</code></pre>
+#workskin p.de-alert.failure > span     { background: #D32F2F; }
+#workskin p.de-alert.item > span        { background: #111111; }
+
+/* --- Task Complete --- */
+#workskin p.de-task-complete {
+    font-family: "Trebuchet MS", "Arial", sans-serif;
+    font-weight: bold;
+    color: #4CAF7D;
+    margin: 1.5em 0;
+}
+
+/* --- Continue Button --- */
+#workskin p.de-continue {
+    margin: 2em 0 0;
+    text-align: left;
+}
+
+#workskin p.de-continue > span {
+    display: inline-block;
+    background-color: #7B1A10;
+    color: #FFFFFF;
+    font-family: "Trebuchet MS", "Arial", sans-serif;
+    font-size: 1.05em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5em 2em;
+    border: 2px solid #A0261A;
+    width: 100%;
+    box-sizing: border-box;
+}</code></pre>
 </details>
