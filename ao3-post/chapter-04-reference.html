@@ -133,18 +133,26 @@
 
 <h3>Player Choices — <code>ol class="de-choices"</code></h3>
 
+<p>Standard choices are orange-red and numbered. Skill checks use a parchment card style (<code>white-check</code>). Add <code>locked</code> to a white-check for an unavailable option. High-stakes checks use <code>red-check</code>.</p>
+
 <ol class="de-choices">
   <li class="old">[Old choice] A previously selected option. Add <code>class="old"</code>.</li>
   <li class="selected">[Selected choice] The option chosen in this scene. Add <code>class="selected"</code>.</li>
   <li>[Normal choice] An unchosen option. No extra class needed.</li>
+  <li class="white-check"><span class="de-skill rhetoric">RHETORIC</span> [Medium: Difficulty 10] A skill check option. Add <code>class="white-check"</code>.</li>
+  <li class="white-check locked" aria-disabled="true"><span class="de-skill electrochemistry">ELECTROCHEMISTRY</span> [Godly: Difficulty 18 — LOCKED] Unavailable. Add both <code>white-check</code> and <code>locked</code>.</li>
+  <li class="red-check"><span class="de-skill half-light">HALF LIGHT</span> [Legendary: Difficulty 16] Dangerous check. Add <code>class="red-check"</code>.</li>
 </ol>
 
 <details>
 <summary>HTML</summary>
 <pre><code>&lt;ol class="de-choices"&gt;
-  &lt;li class="old"&gt;[Old choice] "Text."&lt;/li&gt;
-  &lt;li class="selected"&gt;[Selected choice] "Text."&lt;/li&gt;
-  &lt;li&gt;[Normal choice] "Text."&lt;/li&gt;
+  &lt;li class="old"&gt;"Text."&lt;/li&gt;
+  &lt;li class="selected"&gt;"Text."&lt;/li&gt;
+  &lt;li&gt;"Text."&lt;/li&gt;
+  &lt;li class="white-check"&gt;&lt;span class="de-skill rhetoric"&gt;RHETORIC&lt;/span&gt; [Medium: Difficulty 10] "Text."&lt;/li&gt;
+  &lt;li class="white-check locked" aria-disabled="true"&gt;&lt;span class="de-skill electrochemistry"&gt;ELECTROCHEMISTRY&lt;/span&gt; [Godly: Difficulty 18 — LOCKED] Text.&lt;/li&gt;
+  &lt;li class="red-check"&gt;&lt;span class="de-skill half-light"&gt;HALF LIGHT&lt;/span&gt; [Legendary: Difficulty 16] Text.&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
 </details>
 
@@ -165,7 +173,7 @@
 
 <h3>Continue Button — <code>p class="de-continue"</code></h3>
 
-<p>Full-width dark red bar. Use at scene or chapter breaks.</p>
+<p>Dark red bar. Use at scene or chapter breaks.</p>
 
 <p class="de-continue"><span>CONTINUE ►</span></p>
 
@@ -177,6 +185,8 @@
 <hr />
 
 <h3>Alert Banners — <code>p class="de-alert [type]"</code></h3>
+
+<p>Two <code>span</code>s inside the <code>p</code>: label first, value second. The <code>check-success</code> and <code>check-failed</code> variants auto-inject dice icons via CSS — the <code>item</code>, <code>money</code>, and <code>task-gained</code> variants inject emoji icons the same way.</p>
 
 <p class="de-alert thought">
   <span>Thought Gained</span>
@@ -213,9 +223,29 @@
   <span>failure</span>
 </p>
 
+<p class="de-alert check-success">
+  <span>Check Passed</span>
+  <span>check-success</span>
+</p>
+
+<p class="de-alert check-failed">
+  <span>Check Failed</span>
+  <span>check-failed</span>
+</p>
+
 <p class="de-alert item">
   <span>Item Gained</span>
   <span>item</span>
+</p>
+
+<p class="de-alert money">
+  <span>Money Gained</span>
+  <span>money</span>
+</p>
+
+<p class="de-alert task-gained">
+  <span>Task Gained</span>
+  <span>task-gained</span>
 </p>
 
 <details>
@@ -228,5 +258,25 @@
 &lt;p class="de-alert health-down"&gt;
   &lt;span&gt;Health Damaged&lt;/span&gt;
   &lt;span&gt;-1&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert check-failed"&gt;
+  &lt;span&gt;Check Failed&lt;/span&gt;
+  &lt;span&gt;Rhetoric — Medium&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert item"&gt;
+  &lt;span&gt;Item Gained&lt;/span&gt;
+  &lt;span&gt;Key to Room #1&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert money"&gt;
+  &lt;span&gt;Money Gained&lt;/span&gt;
+  &lt;span&gt;+ 0.90 Réal&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert task-gained"&gt;
+  &lt;span&gt;Task Gained&lt;/span&gt;
+  &lt;span&gt;Interview Cafeteria Manager&lt;/span&gt;
 &lt;/p&gt;</code></pre>
 </details>

@@ -11,6 +11,11 @@
   <span>The Cop of the Apocalypse</span>
 </p>
 
+<p class="de-alert health-up">
+  <span>Health Healed</span>
+  <span>+1</span>
+</p>
+
 <p class="de-alert health-down">
   <span>Health Damaged</span>
   <span>-1</span>
@@ -21,27 +26,72 @@
   <span>+1</span>
 </p>
 
+<p class="de-alert morale-down">
+  <span>Morale Damaged</span>
+  <span>-1</span>
+</p>
+
+<p class="de-alert success">
+  <span>Check Passed</span>
+  <span>Endurance — Easy</span>
+</p>
+
+<p class="de-alert failure">
+  <span>Check Failed</span>
+  <span>Volition — Medium</span>
+</p>
+
+<p class="de-alert check-success">
+  <span>Check Passed</span>
+  <span>Perception — Challenging</span>
+</p>
+
+<p class="de-alert check-failed">
+  <span>Check Failed</span>
+  <span>Rhetoric — Medium</span>
+</p>
+
 <p class="de-alert item">
   <span>Item Gained</span>
   <span>Key to Room #1</span>
 </p>
 
+<p class="de-alert money">
+  <span>Money Gained</span>
+  <span>+ 0.90 Réal</span>
+</p>
+
+<p class="de-alert task-gained">
+  <span>Task Gained</span>
+  <span>Interview Cafeteria Manager</span>
+</p>
+
 <details>
 <summary>HTML</summary>
-<pre><code>&lt;p class="de-alert thought"&gt;
+<pre><code>&lt;!-- Thought --&gt;
+&lt;p class="de-alert thought"&gt;
   &lt;span&gt;Thought Gained&lt;/span&gt;
   &lt;span&gt;The Cop of the Apocalypse&lt;/span&gt;
 &lt;/p&gt;
 
-&lt;p class="de-alert health-down"&gt;
-  &lt;span&gt;Health Damaged&lt;/span&gt;
-  &lt;span&gt;-1&lt;/span&gt;
-&lt;/p&gt;
+&lt;!-- Health / Morale --&gt;
+&lt;p class="de-alert health-up"&gt;&lt;span&gt;Health Healed&lt;/span&gt;&lt;span&gt;+1&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert health-down"&gt;&lt;span&gt;Health Damaged&lt;/span&gt;&lt;span&gt;-1&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert morale-up"&gt;&lt;span&gt;Morale Healed&lt;/span&gt;&lt;span&gt;+1&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert morale-down"&gt;&lt;span&gt;Morale Damaged&lt;/span&gt;&lt;span&gt;-1&lt;/span&gt;&lt;/p&gt;
 
-&lt;p class="de-alert morale-up"&gt;
-  &lt;span&gt;Morale Healed&lt;/span&gt;
-  &lt;span&gt;+1&lt;/span&gt;
-&lt;/p&gt;</code></pre>
+&lt;!-- Check results (plain, no dice) --&gt;
+&lt;p class="de-alert success"&gt;&lt;span&gt;Check Passed&lt;/span&gt;&lt;span&gt;Endurance — Easy&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert failure"&gt;&lt;span&gt;Check Failed&lt;/span&gt;&lt;span&gt;Volition — Medium&lt;/span&gt;&lt;/p&gt;
+
+&lt;!-- Check results with auto-dice injected by CSS --&gt;
+&lt;p class="de-alert check-success"&gt;&lt;span&gt;Check Passed&lt;/span&gt;&lt;span&gt;Perception — Challenging&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert check-failed"&gt;&lt;span&gt;Check Failed&lt;/span&gt;&lt;span&gt;Rhetoric — Medium&lt;/span&gt;&lt;/p&gt;
+
+&lt;!-- Items / money / tasks --&gt;
+&lt;p class="de-alert item"&gt;&lt;span&gt;Item Gained&lt;/span&gt;&lt;span&gt;Key to Room #1&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert money"&gt;&lt;span&gt;Money Gained&lt;/span&gt;&lt;span&gt;+ 0.90 Réal&lt;/span&gt;&lt;/p&gt;
+&lt;p class="de-alert task-gained"&gt;&lt;span&gt;Task Gained&lt;/span&gt;&lt;span&gt;Interview Cafeteria Manager&lt;/span&gt;&lt;/p&gt;</code></pre>
 </details>
 
 <h3>Dialogue Lines</h3>
@@ -111,20 +161,45 @@
 
 <h3>Player Choices</h3>
 
-<p>An ordered list with no visible numbers. Add <code>class="selected"</code> to the chosen option and <code>class="old"</code> to options the character has already picked in a previous scene.</p>
+<p>An ordered list. Add <code>class="selected"</code> to the chosen option and <code>class="old"</code> to options already picked in a previous scene.</p>
+
+<p>Skill checks get <code>class="white-check"</code> (parchment card). Add <code>class="locked"</code> on top for an unavailable check. High-stakes or dangerous checks use <code>class="red-check"</code>.</p>
 
 <ol class="de-choices">
-  <li class="old">[Old choice] "Who do you think left this here?"</li>
-  <li class="selected">[Selected choice] [Pick up the thermos and drink the mystery fluid.] "Bottoms up."</li>
-  <li>[Normal choice] "You're right, Lieutenant. Let's step away from the puddle."</li>
+  <li class="old">"Who do you think left this here?"</li>
+  <li class="selected">"Bottoms up."</li>
+  <li>"You're right, Lieutenant. Let's step away from the puddle."</li>
+  <li class="white-check"><span class="de-skill rhetoric">RHETORIC</span> [Medium: Difficulty 10] "The thermos chose me, Kim."</li>
+  <li class="white-check locked" aria-disabled="true"><span class="de-skill electrochemistry">ELECTROCHEMISTRY</span> [Godly: Difficulty 18 — LOCKED] Identify the compound by smell alone.</li>
+  <li class="red-check"><span class="de-skill half-light">HALF LIGHT</span> [Legendary: Difficulty 16] Drink a second time. All in.</li>
 </ol>
 
 <details>
 <summary>HTML</summary>
 <pre><code>&lt;ol class="de-choices"&gt;
-  &lt;li class="old"&gt;[Old choice] "Who do you think left this here?"&lt;/li&gt;
-  &lt;li class="selected"&gt;[Selected choice] [Pick up the thermos and drink the mystery fluid.] "Bottoms up."&lt;/li&gt;
-  &lt;li&gt;[Normal choice] "You're right, Lieutenant. Let's step away from the puddle."&lt;/li&gt;
+  &lt;!-- Previously chosen --&gt;
+  &lt;li class="old"&gt;"Who do you think left this here?"&lt;/li&gt;
+
+  &lt;!-- Selected this scene --&gt;
+  &lt;li class="selected"&gt;"Bottoms up."&lt;/li&gt;
+
+  &lt;!-- Normal unchosen option --&gt;
+  &lt;li&gt;"You're right, Lieutenant. Let's step away from the puddle."&lt;/li&gt;
+
+  &lt;!-- Skill check (parchment card) --&gt;
+  &lt;li class="white-check"&gt;
+    &lt;span class="de-skill rhetoric"&gt;RHETORIC&lt;/span&gt; [Medium: Difficulty 10] "The thermos chose me, Kim."
+  &lt;/li&gt;
+
+  &lt;!-- Locked skill check — add aria-disabled="true" for screen readers --&gt;
+  &lt;li class="white-check locked" aria-disabled="true"&gt;
+    &lt;span class="de-skill electrochemistry"&gt;ELECTROCHEMISTRY&lt;/span&gt; [Godly: Difficulty 18 — LOCKED] Identify the compound by smell alone.
+  &lt;/li&gt;
+
+  &lt;!-- Dangerous / red check --&gt;
+  &lt;li class="red-check"&gt;
+    &lt;span class="de-skill half-light"&gt;HALF LIGHT&lt;/span&gt; [Legendary: Difficulty 16] Drink a second time. All in.
+  &lt;/li&gt;
 &lt;/ol&gt;</code></pre>
 </details>
 
@@ -141,7 +216,7 @@
 
 <h3>Continue Button</h3>
 
-<p>A full-width dark red bar. Put it at the end of a scene or chapter break.</p>
+<p>A dark red bar. Put it at the end of a scene or chapter break.</p>
 
 <p class="de-continue"><span>CONTINUE ►</span></p>
 
@@ -171,13 +246,21 @@
 &lt;/p&gt;
 
 &lt;ol class="de-choices"&gt;
-  &lt;li class="old"&gt;[Old choice] "Who do you think left this here?"&lt;/li&gt;
-  &lt;li class="selected"&gt;[Selected choice] [Pick up the thermos and drink the mystery fluid.] "Bottoms up."&lt;/li&gt;
-  &lt;li&gt;[Normal choice] "You're right, Lieutenant. Let's step away from the puddle."&lt;/li&gt;
+  &lt;li class="old"&gt;"Who do you think left this here?"&lt;/li&gt;
+  &lt;li class="selected"&gt;"Bottoms up."&lt;/li&gt;
+  &lt;li&gt;"You're right, Lieutenant. Let's step away from the puddle."&lt;/li&gt;
+  &lt;li class="white-check"&gt;&lt;span class="de-skill rhetoric"&gt;RHETORIC&lt;/span&gt; [Medium: Difficulty 10] "The thermos chose me, Kim."&lt;/li&gt;
+  &lt;li class="white-check locked" aria-disabled="true"&gt;&lt;span class="de-skill electrochemistry"&gt;ELECTROCHEMISTRY&lt;/span&gt; [Godly: Difficulty 18 — LOCKED] Identify the compound by smell alone.&lt;/li&gt;
+  &lt;li class="red-check"&gt;&lt;span class="de-skill half-light"&gt;HALF LIGHT&lt;/span&gt; [Legendary: Difficulty 16] Drink a second time. All in.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p class="de-convo"&gt;
   &lt;span class="de-speaker you"&gt;YOU&lt;/span&gt; — "It has been aging like a fine wine, Kim. The city has fermented it just for me." You uncap the vessel and take a deep, desperate gulp.
+&lt;/p&gt;
+
+&lt;p class="de-alert check-failed"&gt;
+  &lt;span&gt;Check Failed&lt;/span&gt;
+  &lt;span&gt;Rhetoric — Medium&lt;/span&gt;
 &lt;/p&gt;
 
 &lt;p class="de-alert health-down"&gt;
@@ -197,5 +280,9 @@
 &lt;p class="de-alert morale-up"&gt;
   &lt;span&gt;Morale Healed&lt;/span&gt;
   &lt;span&gt;+1&lt;/span&gt;
-&lt;/p&gt;</code></pre>
+&lt;/p&gt;
+
+&lt;p class="de-task-complete"&gt;Task complete: Your task name here.&lt;/p&gt;
+
+&lt;p class="de-continue"&gt;&lt;span&gt;CONTINUE ►&lt;/span&gt;&lt;/p&gt;</code></pre>
 </details>
