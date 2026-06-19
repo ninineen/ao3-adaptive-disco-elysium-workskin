@@ -41,7 +41,7 @@ de-fanfic/
 
 **[Read the demo fic on AO3 →](https://archiveofourown.org/works/86984576/chapters/230306496)**
 
-<a href="https://archiveofourown.org/works/86984576/chapters/230306496"><img src="demo.png" width="600" alt="Demo preview"></a>
+<p align="center"><a href="https://archiveofourown.org/works/86984576/chapters/230306496"><img src="demo.png" width="600" alt="Demo preview"></a></p>
 
 ---
 
