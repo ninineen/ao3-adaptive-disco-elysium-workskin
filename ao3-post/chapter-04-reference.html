@@ -1,0 +1,198 @@
+<h2>Documentation: All Classes &amp; Elements</h2>
+
+<p>All classes go on the elements shown below.</p>
+
+<hr />
+
+<h3>Dialogue Lines — <code>de-convo</code></h3>
+
+<p>Wrap each line of skill dialogue or speech in a <code>p class="de-convo"</code>. Uses a hanging indent so the speaker label lines up cleanly.</p>
+
+<p class="de-convo">
+  <span class="de-speaker">KIM KITSURAGI</span> — "Detective, I highly advise against drinking from a thermos you found inside a rusted storm drain."
+</p>
+
+<p class="de-convo">
+  <span class="de-skill logic">LOGIC</span>
+  <span class="de-check success">[Easy: Success]</span> — This is what a skill line with a passing check looks like.
+</p>
+
+<p class="de-convo">
+  <span class="de-skill volition">VOLITION</span>
+  <span class="de-check failure">[Medium: Failure]</span> — And this is what a failing check looks like.
+</p>
+
+<p class="de-convo">
+  <span class="de-skill half-light">HALF LIGHT</span> — A skill line with no check — just commentary or inner voice.
+</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-convo"&gt;
+  &lt;span class="de-speaker"&gt;KIM KITSURAGI&lt;/span&gt; — "Your text here."
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill logic"&gt;LOGIC&lt;/span&gt;
+  &lt;span class="de-check success"&gt;[Easy: Success]&lt;/span&gt; — Your text here.
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill volition"&gt;VOLITION&lt;/span&gt;
+  &lt;span class="de-check failure"&gt;[Medium: Failure]&lt;/span&gt; — Your text here.
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill half-light"&gt;HALF LIGHT&lt;/span&gt; — Your text here.
+&lt;/p&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Speaker Label — <code>de-speaker</code></h3>
+
+<p>For named characters. Bold, uppercase, neutral gray.</p>
+
+<p class="de-convo"><span class="de-speaker">YOU</span> — Example speaker line.</p>
+<p class="de-convo"><span class="de-speaker">KIM KITSURAGI</span> — Example speaker line.</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;span class="de-speaker"&gt;YOU&lt;/span&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Skill Labels — <code>de-skill [skill-name]</code></h3>
+
+<p>Always bold and uppercase. Add the skill name as a second class for colour.</p>
+
+<p><strong>INTELLECT</strong></p>
+
+<p class="de-convo"><span class="de-skill logic">LOGIC</span> — <code>de-skill logic</code></p>
+<p class="de-convo"><span class="de-skill encyclopedia">ENCYCLOPEDIA</span> — <code>de-skill encyclopedia</code></p>
+<p class="de-convo"><span class="de-skill rhetoric">RHETORIC</span> — <code>de-skill rhetoric</code></p>
+<p class="de-convo"><span class="de-skill drama">DRAMA</span> — <code>de-skill drama</code></p>
+<p class="de-convo"><span class="de-skill conceptualization">CONCEPTUALIZATION</span> — <code>de-skill conceptualization</code></p>
+<p class="de-convo"><span class="de-skill visual-calculus">VISUAL CALCULUS</span> — <code>de-skill visual-calculus</code></p>
+
+<p><strong>PSYCHE</strong></p>
+
+<p class="de-convo"><span class="de-skill volition">VOLITION</span> — <code>de-skill volition</code></p>
+<p class="de-convo"><span class="de-skill inland-empire">INLAND EMPIRE</span> — <code>de-skill inland-empire</code></p>
+<p class="de-convo"><span class="de-skill empathy">EMPATHY</span> — <code>de-skill empathy</code></p>
+<p class="de-convo"><span class="de-skill authority">AUTHORITY</span> — <code>de-skill authority</code></p>
+<p class="de-convo"><span class="de-skill esprit-de-corps">ESPRIT DE CORPS</span> — <code>de-skill esprit-de-corps</code></p>
+<p class="de-convo"><span class="de-skill suggestion">SUGGESTION</span> — <code>de-skill suggestion</code></p>
+
+<p><strong>PHYSIQUE</strong></p>
+
+<p class="de-convo"><span class="de-skill endurance">ENDURANCE</span> — <code>de-skill endurance</code></p>
+<p class="de-convo"><span class="de-skill pain-threshold">PAIN THRESHOLD</span> — <code>de-skill pain-threshold</code></p>
+<p class="de-convo"><span class="de-skill physical-instrument">PHYSICAL INSTRUMENT</span> — <code>de-skill physical-instrument</code></p>
+<p class="de-convo"><span class="de-skill electrochemistry">ELECTROCHEMISTRY</span> — <code>de-skill electrochemistry</code></p>
+<p class="de-convo"><span class="de-skill shivers">SHIVERS</span> — <code>de-skill shivers</code></p>
+<p class="de-convo"><span class="de-skill half-light">HALF LIGHT</span> — <code>de-skill half-light</code></p>
+
+<p><strong>MOTORICS</strong></p>
+
+<p class="de-convo"><span class="de-skill hand-eye-coordination">HAND/EYE COORDINATION</span> — <code>de-skill hand-eye-coordination</code></p>
+<p class="de-convo"><span class="de-skill perception">PERCEPTION</span> — <code>de-skill perception</code></p>
+<p class="de-convo"><span class="de-skill reaction-speed">REACTION SPEED</span> — <code>de-skill reaction-speed</code></p>
+<p class="de-convo"><span class="de-skill savoir-faire">SAVOIR FAIRE</span> — <code>de-skill savoir-faire</code></p>
+<p class="de-convo"><span class="de-skill interfacing">INTERFACING</span> — <code>de-skill interfacing</code></p>
+<p class="de-convo"><span class="de-skill composure">COMPOSURE</span> — <code>de-skill composure</code></p>
+
+<p><strong>PRIMAL VOICES</strong></p>
+
+<p class="de-convo"><span class="de-skill ancient-reptilian-brain">ANCIENT REPTILIAN BRAIN</span> — <code>de-skill ancient-reptilian-brain</code></p>
+<p class="de-convo"><span class="de-skill limbic-system">LIMBIC SYSTEM</span> — <code>de-skill limbic-system</code></p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;span class="de-skill logic"&gt;LOGIC&lt;/span&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Skill Check Results — <code>de-check</code></h3>
+
+<p class="de-convo"><span class="de-skill logic">LOGIC</span> <span class="de-check success">[Easy: Success]</span> — <code>de-check success</code></p>
+<p class="de-convo"><span class="de-skill logic">LOGIC</span> <span class="de-check failure">[Medium: Failure]</span> — <code>de-check failure</code></p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;span class="de-check success"&gt;[Easy: Success]&lt;/span&gt;
+&lt;span class="de-check failure"&gt;[Medium: Failure]&lt;/span&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Player Choices — <code>ol class="de-choices"</code></h3>
+
+<ol class="de-choices">
+  <li class="old">[Old choice] A previously selected option. Add <code>class="old"</code>.</li>
+  <li class="selected">[Selected choice] The option chosen in this scene. Add <code>class="selected"</code>.</li>
+  <li>[Normal choice] An unchosen option. No extra class needed.</li>
+</ol>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;ol class="de-choices"&gt;
+  &lt;li class="old"&gt;[Old choice] "Text."&lt;/li&gt;
+  &lt;li class="selected"&gt;[Selected choice] "Text."&lt;/li&gt;
+  &lt;li&gt;[Normal choice] "Text."&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Alert Banners — <code>p class="de-alert [type]"</code></h3>
+
+<p class="de-alert thought">
+  <span>Thought Gained</span>
+  <span>thought</span>
+</p>
+
+<p class="de-alert health-up">
+  <span>Health Healed</span>
+  <span>health-up</span>
+</p>
+
+<p class="de-alert health-down">
+  <span>Health Damaged</span>
+  <span>health-down</span>
+</p>
+
+<p class="de-alert morale-up">
+  <span>Morale Healed</span>
+  <span>morale-up</span>
+</p>
+
+<p class="de-alert morale-down">
+  <span>Morale Damaged</span>
+  <span>morale-down</span>
+</p>
+
+<p class="de-alert success">
+  <span>Check Passed</span>
+  <span>success</span>
+</p>
+
+<p class="de-alert failure">
+  <span>Check Failed</span>
+  <span>failure</span>
+</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-alert thought"&gt;
+  &lt;span&gt;Thought Gained&lt;/span&gt;
+  &lt;span&gt;The Cop of the Apocalypse&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert health-down"&gt;
+  &lt;span&gt;Health Damaged&lt;/span&gt;
+  &lt;span&gt;-1&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</details>

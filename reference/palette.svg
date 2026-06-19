@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 560" font-family="monospace" font-size="12">
+
+  <!-- Background -->
+  <rect width="660" height="560" fill="#1a1a1a" rx="8"/>
+
+  <!-- INTELLECT -->
+  <text x="20" y="30" fill="#aaaaaa" font-size="11" font-weight="bold" letter-spacing="2">INTELLECT</text>
+
+  <rect x="20" y="40" width="90" height="50" fill="#2A7B9B" rx="4"/>
+  <text x="65" y="85" fill="#fff" text-anchor="middle" font-size="10">#2A7B9B</text>
+  <text x="65" y="104" fill="#cccccc" text-anchor="middle" font-size="10">Logic</text>
+
+  <rect x="125" y="40" width="90" height="50" fill="#3B888C" rx="4"/>
+  <text x="170" y="85" fill="#fff" text-anchor="middle" font-size="10">#3B888C</text>
+  <text x="170" y="104" fill="#cccccc" text-anchor="middle" font-size="10">Encyclopedia</text>
+
+  <rect x="230" y="40" width="90" height="50" fill="#1E88E5" rx="4"/>
+  <text x="275" y="85" fill="#fff" text-anchor="middle" font-size="10">#1E88E5</text>
+  <text x="275" y="104" fill="#cccccc" text-anchor="middle" font-size="10">Rhetoric</text>
+
+  <rect x="335" y="40" width="90" height="50" fill="#5C6BC0" rx="4"/>
+  <text x="380" y="85" fill="#fff" text-anchor="middle" font-size="10">#5C6BC0</text>
+  <text x="380" y="104" fill="#cccccc" text-anchor="middle" font-size="10">Drama</text>
+
+  <rect x="440" y="40" width="90" height="50" fill="#0097A7" rx="4"/>
+  <text x="485" y="85" fill="#fff" text-anchor="middle" font-size="10">#0097A7</text>
+  <text x="485" y="104" fill="#cccccc" text-anchor="middle" font-size="10">Conceptualization</text>
+
+  <rect x="545" y="40" width="90" height="50" fill="#4682B4" rx="4"/>
+  <text x="590" y="85" fill="#fff" text-anchor="middle" font-size="10">#4682B4</text>
+  <text x="590" y="104" fill="#cccccc" text-anchor="middle" font-size="10">Visual Calculus</text>
+
+  <!-- PSYCHE -->
+  <text x="20" y="130" fill="#aaaaaa" font-size="11" font-weight="bold" letter-spacing="2">PSYCHE</text>
+
+  <rect x="20" y="140" width="90" height="50" fill="#8E24AA" rx="4"/>
+  <text x="65" y="185" fill="#fff" text-anchor="middle" font-size="10">#8E24AA</text>
+  <text x="65" y="204" fill="#cccccc" text-anchor="middle" font-size="10">Volition</text>
+
+  <rect x="125" y="140" width="90" height="50" fill="#7B1FA2" rx="4"/>
+  <text x="170" y="185" fill="#fff" text-anchor="middle" font-size="10">#7B1FA2</text>
+  <text x="170" y="204" fill="#cccccc" text-anchor="middle" font-size="10">Inland Empire</text>
+
+  <rect x="230" y="140" width="90" height="50" fill="#9C27B0" rx="4"/>
+  <text x="275" y="185" fill="#fff" text-anchor="middle" font-size="10">#9C27B0</text>
+  <text x="275" y="204" fill="#cccccc" text-anchor="middle" font-size="10">Empathy</text>
+
+  <rect x="335" y="140" width="90" height="50" fill="#6A1B9A" rx="4"/>
+  <text x="380" y="185" fill="#fff" text-anchor="middle" font-size="10">#6A1B9A</text>
+  <text x="380" y="204" fill="#cccccc" text-anchor="middle" font-size="10">Authority</text>
+
+  <rect x="440" y="140" width="90" height="50" fill="#5E35B1" rx="4"/>
+  <text x="485" y="185" fill="#fff" text-anchor="middle" font-size="10">#5E35B1</text>
+  <text x="485" y="204" fill="#cccccc" text-anchor="middle" font-size="10">Esprit de Corps</text>
+
+  <rect x="545" y="140" width="90" height="50" fill="#AB47BC" rx="4"/>
+  <text x="590" y="185" fill="#fff" text-anchor="middle" font-size="10">#AB47BC</text>
+  <text x="590" y="204" fill="#cccccc" text-anchor="middle" font-size="10">Suggestion</text>
+
+  <!-- PHYSIQUE -->
+  <text x="20" y="230" fill="#aaaaaa" font-size="11" font-weight="bold" letter-spacing="2">PHYSIQUE</text>
+
+  <rect x="20" y="240" width="90" height="50" fill="#C62828" rx="4"/>
+  <text x="65" y="285" fill="#fff" text-anchor="middle" font-size="10">#C62828</text>
+  <text x="65" y="304" fill="#cccccc" text-anchor="middle" font-size="10">Endurance</text>
+
+  <rect x="125" y="240" width="90" height="50" fill="#D84315" rx="4"/>
+  <text x="170" y="285" fill="#fff" text-anchor="middle" font-size="10">#D84315</text>
+  <text x="170" y="304" fill="#cccccc" text-anchor="middle" font-size="10">Pain Threshold</text>
+
+  <rect x="230" y="240" width="90" height="50" fill="#A1522E" rx="4"/>
+  <text x="275" y="285" fill="#fff" text-anchor="middle" font-size="10">#A1522E</text>
+  <text x="275" y="304" fill="#cccccc" text-anchor="middle" font-size="10">Phys. Instrument</text>
+
+  <rect x="335" y="240" width="90" height="50" fill="#C2185B" rx="4"/>
+  <text x="380" y="285" fill="#fff" text-anchor="middle" font-size="10">#C2185B</text>
+  <text x="380" y="304" fill="#cccccc" text-anchor="middle" font-size="10">Electrochemistry</text>
+
+  <rect x="440" y="240" width="90" height="50" fill="#9E334D" rx="4"/>
+  <text x="485" y="285" fill="#fff" text-anchor="middle" font-size="10">#9E334D</text>
+  <text x="485" y="304" fill="#cccccc" text-anchor="middle" font-size="10">Shivers</text>
+
+  <rect x="545" y="240" width="90" height="50" fill="#D32F2F" rx="4"/>
+  <text x="590" y="285" fill="#fff" text-anchor="middle" font-size="10">#D32F2F</text>
+  <text x="590" y="304" fill="#cccccc" text-anchor="middle" font-size="10">Half-Light</text>
+
+  <!-- MOTORICS -->
+  <text x="20" y="330" fill="#aaaaaa" font-size="11" font-weight="bold" letter-spacing="2">MOTORICS</text>
+
+  <rect x="20" y="340" width="90" height="50" fill="#E67E22" rx="4"/>
+  <text x="65" y="385" fill="#fff" text-anchor="middle" font-size="10">#E67E22</text>
+  <text x="65" y="404" fill="#cccccc" text-anchor="middle" font-size="10">Hand/Eye Coord.</text>
+
+  <rect x="125" y="340" width="90" height="50" fill="#D39F10" rx="4"/>
+  <text x="170" y="385" fill="#fff" text-anchor="middle" font-size="10">#D39F10</text>
+  <text x="170" y="404" fill="#cccccc" text-anchor="middle" font-size="10">Perception</text>
+
+  <rect x="230" y="340" width="90" height="50" fill="#D35400" rx="4"/>
+  <text x="275" y="385" fill="#fff" text-anchor="middle" font-size="10">#D35400</text>
+  <text x="275" y="404" fill="#cccccc" text-anchor="middle" font-size="10">Reaction Speed</text>
+
+  <rect x="335" y="340" width="90" height="50" fill="#B8860B" rx="4"/>
+  <text x="380" y="385" fill="#fff" text-anchor="middle" font-size="10">#B8860B</text>
+  <text x="380" y="404" fill="#cccccc" text-anchor="middle" font-size="10">Savoir Faire</text>
+
+  <rect x="440" y="340" width="90" height="50" fill="#A67C00" rx="4"/>
+  <text x="485" y="385" fill="#fff" text-anchor="middle" font-size="10">#A67C00</text>
+  <text x="485" y="404" fill="#cccccc" text-anchor="middle" font-size="10">Interfacing</text>
+
+  <rect x="545" y="340" width="90" height="50" fill="#C08A18" rx="4"/>
+  <text x="590" y="385" fill="#fff" text-anchor="middle" font-size="10">#C08A18</text>
+  <text x="590" y="404" fill="#cccccc" text-anchor="middle" font-size="10">Composure</text>
+
+  <!-- PRIMAL VOICES -->
+  <text x="20" y="430" fill="#aaaaaa" font-size="11" font-weight="bold" letter-spacing="2">PRIMAL VOICES</text>
+
+  <rect x="20" y="440" width="200" height="60" fill="#3A6B58" rx="4"/>
+  <text x="120" y="475" fill="#fff" text-anchor="middle" font-size="11">#3A6B58</text>
+  <text x="120" y="494" fill="#cccccc" text-anchor="middle" font-size="11">Ancient Reptilian Brain</text>
+
+  <rect x="235" y="440" width="200" height="60" fill="#B33951" rx="4"/>
+  <text x="335" y="475" fill="#fff" text-anchor="middle" font-size="11">#B33951</text>
+  <text x="335" y="494" fill="#cccccc" text-anchor="middle" font-size="11">Limbic System</text>
+
+</svg>

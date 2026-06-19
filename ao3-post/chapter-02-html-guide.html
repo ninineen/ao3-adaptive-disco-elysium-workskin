@@ -1,0 +1,156 @@
+<p>Copy this into your chapter body while the work skin is active. Switch to HTML mode in the AO3 editor before pasting.</p>
+
+<p>Each element is shown in context. Mix and match — you don't have to use all of them.</p>
+
+<h3>Alert Banners</h3>
+
+<p>Two <code>span</code> tags inside the <code>p</code>: the first is the label, the second is the value. The skin stacks them automatically.</p>
+
+<p class="de-alert thought">
+  <span>Thought Gained</span>
+  <span>The Cop of the Apocalypse</span>
+</p>
+
+<p class="de-alert health-down">
+  <span>Health Damaged</span>
+  <span>-1</span>
+</p>
+
+<p class="de-alert morale-up">
+  <span>Morale Healed</span>
+  <span>+1</span>
+</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-alert thought"&gt;
+  &lt;span&gt;Thought Gained&lt;/span&gt;
+  &lt;span&gt;The Cop of the Apocalypse&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert health-down"&gt;
+  &lt;span&gt;Health Damaged&lt;/span&gt;
+  &lt;span&gt;-1&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-alert morale-up"&gt;
+  &lt;span&gt;Morale Healed&lt;/span&gt;
+  &lt;span&gt;+1&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</details>
+
+<h3>Dialogue Lines</h3>
+
+<p>The <code>de-convo</code> class handles the hanging indent. The speaker or skill label goes in its own <code>span</code> at the start.</p>
+
+<p class="de-convo">
+  <span class="de-speaker">KIM KITSURAGI</span> — "Detective, I highly advise against drinking from a thermos you found inside a rusted storm drain."
+</p>
+
+<p class="de-convo">
+  <span class="de-skill electrochemistry">ELECTROCHEMISTRY</span>
+  <span class="de-check success">[Medium: Success]</span> — But look at it! The strange, iridescent film resting on top of the liquid promises a kaleidoscope of illicit thrills. Just a little sip. It will make you feel like a god.
+</p>
+
+<p class="de-convo">
+  <span class="de-skill volition">VOLITION</span>
+  <span class="de-check failure">[Easy: Failure]</span> — The lieutenant is right. It's a blatant biohazard. But you are so, so weak against the call of the void.
+</p>
+
+<p class="de-convo">
+  <span class="de-skill half-light">HALF LIGHT</span> — FIRE. PURE ALKALINE FIRE IN YOUR VEINS. YOUR ORGANS ARE MELTING.
+</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;!-- Named character speaking --&gt;
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-speaker"&gt;KIM KITSURAGI&lt;/span&gt; — "Detective, I highly advise against drinking from a thermos you found inside a rusted storm drain."
+&lt;/p&gt;
+
+&lt;!-- Skill check with result --&gt;
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill electrochemistry"&gt;ELECTROCHEMISTRY&lt;/span&gt;
+  &lt;span class="de-check success"&gt;[Medium: Success]&lt;/span&gt; — But look at it! The strange, iridescent film resting on top of the liquid promises a kaleidoscope of illicit thrills. Just a little sip. It will make you feel like a god.
+&lt;/p&gt;
+
+&lt;!-- Skill check failure --&gt;
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill volition"&gt;VOLITION&lt;/span&gt;
+  &lt;span class="de-check failure"&gt;[Easy: Failure]&lt;/span&gt; — The lieutenant is right. It's a blatant biohazard. But you are so, so weak against the call of the void.
+&lt;/p&gt;
+
+&lt;!-- Skill without a check (inner monologue / commentary) --&gt;
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill half-light"&gt;HALF LIGHT&lt;/span&gt; — FIRE. PURE ALKALINE FIRE IN YOUR VEINS. YOUR ORGANS ARE MELTING.
+&lt;/p&gt;</code></pre>
+</details>
+
+<h3>Player Choices</h3>
+
+<p>An ordered list with no visible numbers. Add <code>class="selected"</code> to the chosen option and <code>class="old"</code> to options the character has already picked in a previous scene.</p>
+
+<ol class="de-choices">
+  <li class="old">[Old choice] "Who do you think left this here?"</li>
+  <li class="selected">[Selected choice] [Pick up the thermos and drink the mystery fluid.] "Bottoms up."</li>
+  <li>[Normal choice] "You're right, Lieutenant. Let's step away from the puddle."</li>
+</ol>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;ol class="de-choices"&gt;
+  &lt;li class="old"&gt;[Old choice] "Who do you think left this here?"&lt;/li&gt;
+  &lt;li class="selected"&gt;[Selected choice] [Pick up the thermos and drink the mystery fluid.] "Bottoms up."&lt;/li&gt;
+  &lt;li&gt;[Normal choice] "You're right, Lieutenant. Let's step away from the puddle."&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</details>
+
+<h3>Full Example Scene</h3>
+
+<p>All elements together, in order, as they would appear in a chapter.</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-convo"&gt;
+  &lt;span class="de-speaker"&gt;KIM KITSURAGI&lt;/span&gt; — "Detective, I highly advise against drinking from a thermos you found inside a rusted storm drain."
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill electrochemistry"&gt;ELECTROCHEMISTRY&lt;/span&gt;
+  &lt;span class="de-check success"&gt;[Medium: Success]&lt;/span&gt; — But look at it! The strange, iridescent film resting on top of the liquid promises a kaleidoscope of illicit thrills. Just a little sip. It will make you feel like a god.
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill volition"&gt;VOLITION&lt;/span&gt;
+  &lt;span class="de-check failure"&gt;[Easy: Failure]&lt;/span&gt; — The lieutenant is right. It's a blatant biohazard. But you are so, so weak against the call of the void.
+&lt;/p&gt;
+
+&lt;ol class="de-choices"&gt;
+  &lt;li class="old"&gt;[Old choice] "Who do you think left this here?"&lt;/li&gt;
+  &lt;li class="selected"&gt;[Selected choice] [Pick up the thermos and drink the mystery fluid.] "Bottoms up."&lt;/li&gt;
+  &lt;li&gt;[Normal choice] "You're right, Lieutenant. Let's step away from the puddle."&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-speaker"&gt;YOU&lt;/span&gt; — "It has been aging like a fine wine, Kim. The city has fermented it just for me." You uncap the vessel and take a deep, desperate gulp.
+&lt;/p&gt;
+
+&lt;p class="de-alert health-down"&gt;
+  &lt;span&gt;Health Damaged&lt;/span&gt;
+  &lt;span&gt;-1&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill half-light"&gt;HALF LIGHT&lt;/span&gt; — FIRE. PURE ALKALINE FIRE IN YOUR VEINS. YOUR ORGANS ARE MELTING.
+&lt;/p&gt;
+
+&lt;p class="de-convo"&gt;
+  &lt;span class="de-skill pain-threshold"&gt;PAIN THRESHOLD&lt;/span&gt;
+  &lt;span class="de-check success"&gt;[Formidable: Success]&lt;/span&gt; — It hurts, but you swallow the agony. You are a machine. A broken, poisoned machine, but a machine nonetheless.
+&lt;/p&gt;
+
+&lt;p class="de-alert morale-up"&gt;
+  &lt;span&gt;Morale Healed&lt;/span&gt;
+  &lt;span&gt;+1&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</details>

@@ -1,0 +1,227 @@
+/* =========================================
+   DISCO ELYSIUM: ADAPTIVE THEME WORK SKIN
+   Modern CSS version — NOT compatible with AO3.
+   AO3 strips :root variables, nesting, @layer, @property, and :is()/:where().
+   This file is for personal reference/organization only.
+   See deworkskin.css for the AO3-compatible version.
+   ========================================= */
+
+@layer reset, base, skills, alerts, choices;
+
+
+/* --- Typed Custom Properties --- */
+@property --de-success  { syntax: "<color>"; inherits: true; initial-value: #109352; }
+@property --de-failure  { syntax: "<color>"; inherits: true; initial-value: #D32F2F; }
+/* Typed so these can be transitioned/animated (e.g. a check-result flash) */
+
+
+:root {
+    /* --- Layout --- */
+    --de-indent: 1.5em;
+    --de-line-height: 1.6;
+
+    /* --- Neutral --- */
+    --de-speaker-color: #6B7280;
+
+    /* --- Intellect --- */
+    --de-logic:               #2A7B9B;
+    --de-encyclopedia:        #3B888C;
+    --de-rhetoric:            #1E88E5;
+    --de-drama:               #5C6BC0;
+    --de-conceptualization:   #0097A7;
+    --de-visual-calculus:     #4682B4;
+
+    /* --- Psyche --- */
+    --de-volition:            #8E24AA;
+    --de-inland-empire:       #7B1FA2;
+    --de-empathy:             #9C27B0;
+    --de-authority:           #6A1B9A;
+    --de-esprit-de-corps:     #5E35B1;
+    --de-suggestion:          #AB47BC;
+
+    /* --- Physique --- */
+    --de-endurance:           #C62828;
+    --de-pain-threshold:      #D84315;
+    --de-physical-instrument: #A1522E;
+    --de-electrochemistry:    #C2185B;
+    --de-shivers:             #9E334D;
+    --de-half-light:          #D32F2F;
+
+    /* --- Motorics --- */
+    --de-hand-eye:            #E67E22;
+    --de-perception:          #D39F10;
+    --de-reaction-speed:      #D35400;
+    --de-savoir-faire:        #B8860B;
+    --de-interfacing:         #A67C00;
+    --de-composure:           #C08A18;
+
+    /* --- Primal Voices --- */
+    --de-ancient-reptilian:   #3A6B58;
+    --de-limbic-system:       #B33951;
+
+    /* --- Checks (also declared via @property above for animatability) --- */
+    --de-success: #109352;
+    --de-failure: #D32F2F;
+
+    /* --- Choices --- */
+    --de-choice-color:  #C04000;
+    --de-choice-old:    #8D3200;
+    --de-choice-marker: #6B7280;
+
+    /* --- Alerts --- */
+    --de-alert-thought:     #374151;
+    --de-alert-health-up:   #D84315;
+    --de-alert-morale-up:   #1E88E5;
+    --de-alert-health-down: #991B1B;
+    --de-alert-morale-down: #7B1FA2;
+}
+
+
+/* =========================================
+   BASE
+   ========================================= */
+@layer base {
+    #workskin {
+        .de-convo {
+            line-height: var(--de-line-height);
+            margin-bottom: 1.5em;
+            padding-left: var(--de-indent);
+            text-indent: calc(-1 * var(--de-indent));
+        }
+
+        /* Shared typographic treatment — :where() keeps specificity at zero */
+        :where(.de-speaker, .de-skill) {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .de-speaker { color: var(--de-speaker-color); }
+    }
+}
+
+
+/* =========================================
+   SKILLS
+   --_color: set per-variant; read once on .de-skill
+   ========================================= */
+@layer skills {
+    #workskin .de-skill {
+        color: var(--_color);
+
+        /* Intellect */
+        &.logic              { --_color: var(--de-logic); }
+        &.encyclopedia       { --_color: var(--de-encyclopedia); }
+        &.rhetoric           { --_color: var(--de-rhetoric); }
+        &.drama              { --_color: var(--de-drama); }
+        &.conceptualization  { --_color: var(--de-conceptualization); }
+        &.visual-calculus    { --_color: var(--de-visual-calculus); }
+
+        /* Psyche */
+        &.volition           { --_color: var(--de-volition); }
+        &.inland-empire      { --_color: var(--de-inland-empire); }
+        &.empathy            { --_color: var(--de-empathy); }
+        &.authority          { --_color: var(--de-authority); }
+        &.esprit-de-corps    { --_color: var(--de-esprit-de-corps); }
+        &.suggestion         { --_color: var(--de-suggestion); }
+
+        /* Physique */
+        &.endurance          { --_color: var(--de-endurance); }
+        &.pain-threshold     { --_color: var(--de-pain-threshold); }
+        &.physical-instrument{ --_color: var(--de-physical-instrument); }
+        &.electrochemistry   { --_color: var(--de-electrochemistry); }
+        &.shivers            { --_color: var(--de-shivers); }
+        &.half-light         { --_color: var(--de-half-light); }
+
+        /* Motorics */
+        &.hand-eye-coordination { --_color: var(--de-hand-eye); }
+        &.perception         { --_color: var(--de-perception); }
+        &.reaction-speed     { --_color: var(--de-reaction-speed); }
+        &.savoir-faire       { --_color: var(--de-savoir-faire); }
+        &.interfacing        { --_color: var(--de-interfacing); }
+        &.composure          { --_color: var(--de-composure); }
+
+        /* Primal Voices */
+        &.ancient-reptilian-brain { --_color: var(--de-ancient-reptilian); }
+        &.limbic-system      { --_color: var(--de-limbic-system); }
+    }
+
+    #workskin .de-check {
+        font-style: italic;
+        font-weight: normal;
+
+        &.success { color: var(--de-success); }
+        &.failure { color: var(--de-failure); }
+    }
+}
+
+
+/* =========================================
+   CHOICES
+   ========================================= */
+@layer choices {
+    #workskin ol.de-choices {
+        list-style-type: decimal;
+        margin-block: 1.5em;
+        padding-left: 2em;
+
+        li {
+            color: var(--de-choice-color);
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            padding: 0.2em 0.5em;
+            border-radius: 3px;
+
+            &::marker { color: var(--de-choice-marker); }
+
+            &:hover,
+            &.selected {
+                background-color: var(--de-choice-color);
+                color: #fff;
+                cursor: pointer;
+            }
+
+            &.old {
+                color: var(--de-choice-old);
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+
+/* =========================================
+   ALERTS (Thoughts, Health, Morale)
+   ========================================= */
+@layer alerts {
+    #workskin p.de-alert {
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 2em 0;
+        line-height: 1.3;
+
+        > span {
+            display: inline;
+            color: #fff;
+            padding: 0.1em 1.5em;
+
+            &:first-of-type {
+                font-size: 1.1em;
+                font-weight: bold;
+
+                &::after {
+                    content: "\a";
+                    white-space: pre;
+                }
+            }
+        }
+
+        &.thought     > span { background: var(--de-alert-thought); }
+        &.health-up   > span { background: var(--de-alert-health-up); }
+        &.morale-up   > span { background: var(--de-alert-morale-up); }
+        &.health-down > span { background: var(--de-alert-health-down); }
+        &.morale-down > span { background: var(--de-alert-morale-down); }
+        &.success     > span { background: var(--de-success); }
+        &.failure     > span { background: var(--de-failure); }
+    }
+}
