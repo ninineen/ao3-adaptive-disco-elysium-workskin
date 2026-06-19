@@ -304,8 +304,8 @@
     display: block;
     font-size: 2em;
     color: #FFFFFF;
-    padding: 0.3em 2em;
-    width: 80%;
+    padding: 0.3em 1.5em;
+    width: fit-content;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -350,11 +350,11 @@
 /* --- Continue Button --- */
 #workskin p.de-continue {
     margin: 2em 0 0;
-    text-align: left;
+    text-align: right;
 }
 
 #workskin p.de-continue > span {
-    display: inline-block;
+    display: block;
     background-color: #7B1A10;
     color: #FFFFFF;
     font-family: "Trebuchet MS", "Arial", sans-serif;
@@ -364,5 +364,9 @@
     letter-spacing: 0.08em;
     padding: 0.5em 2em;
     border: 2px solid #A0261A;
-    width: fit-content;
+    width: 80%;
+    margin-left: auto;
+    margin-right: 0;
+    box-sizing: border-box;
+    text-align: start;
 }
