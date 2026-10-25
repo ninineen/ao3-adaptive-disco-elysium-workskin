@@ -84,7 +84,7 @@ A separate internal system for characters who rule on themselves instead of argu
 
 | Class | What it does |
 |---|---|
-| `de-bench` | Hanging-indent paragraph with a judicial left border |
+| `de-bench` | Hanging-indent paragraph for Kim's bench lines |
 | `de-voice lieutenant` | Burnt copper voice label (procedure, control) |
 | `de-voice partner` | Warm amber voice label (attachment, care) |
 | `de-voice boy` | Forget-me-not blue voice label (the child beneath the uniform) |
