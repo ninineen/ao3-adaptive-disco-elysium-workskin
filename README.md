@@ -71,6 +71,25 @@ de-fanfic/
 | `de-check success` | Italic green text for a passed check |
 | `de-check failure` | Italic red text for a failed check |
 
+### Kim's Bench
+
+A separate internal system for characters who rule on themselves instead of arguing with themselves. Rulings, not skill checks.
+
+```html
+<p class="de-bench">
+  <span class="de-voice lieutenant">THE LIEUTENANT</span>
+  <span class="de-ruling">[Overruled]</span> — <em>We do not open files we cannot close.</em>
+</p>
+```
+
+| Class | What it does |
+|---|---|
+| `de-bench` | Hanging-indent paragraph with a judicial left border |
+| `de-voice lieutenant` | Burnt copper voice label (procedure, control) |
+| `de-voice partner` | Warm amber voice label (attachment, care) |
+| `de-voice boy` | Forget-me-not blue voice label (the child beneath the uniform) |
+| `de-ruling` | Upright bracketed ruling, coloured to match its voice — free text, never a check |
+
 ### Skill colours
 
 Use as `<span class="de-skill SKILLNAME">SKILL NAME</span>`.

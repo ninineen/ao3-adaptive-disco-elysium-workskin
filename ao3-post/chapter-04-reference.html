@@ -131,6 +131,66 @@
 
 <hr />
 
+<h3>Kim's Bench — <code>p class="de-bench"</code></h3>
+
+<p>A separate internal system for characters who <em>rule on themselves</em> rather than arguing with themselves. Each line is a voice label, a ruling in square brackets, and the thought (usually in <code>em</code>). Rulings are free text — <code>Sustained</code>, <code>Overruled</code>, <code>Standing order</code>, <code>Struck</code>, or anything you invent — and are <strong>not skill checks</strong>: never use <code>de-check</code> for them, and no success/failure colours apply.</p>
+
+<p class="de-bench">
+  <span class="de-voice lieutenant">THE LIEUTENANT</span>
+  <span class="de-ruling">[Overruled]</span> — <em>We do not open files we cannot close.</em>
+</p>
+
+<p class="de-bench">
+  <span class="de-voice partner">THE PARTNER</span>
+  <span class="de-ruling">[Entered]</span> — <em>He has not asked once. He is not going to ask. He is owed the reason anyway.</em>
+</p>
+
+<p class="de-bench">
+  <span class="de-voice boy">THE BOY</span>
+  <span class="de-ruling">[Standing order]</span> — <em>Stand straight. Hands still. Be easy to keep.</em>
+</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;p class="de-bench"&gt;
+  &lt;span class="de-voice lieutenant"&gt;THE LIEUTENANT&lt;/span&gt;
+  &lt;span class="de-ruling"&gt;[Overruled]&lt;/span&gt; — &lt;em&gt;We do not open files we cannot close.&lt;/em&gt;
+&lt;/p&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Bench Voices — <code>de-voice [voice]</code></h3>
+
+<p>Bold, uppercase labels. Three voices ship with the skin; the ruling inherits the voice's colour. Only format explicit labelled bench lines — ordinary narration stays prose.</p>
+
+<p class="de-bench"><span class="de-voice lieutenant">THE LIEUTENANT</span> — <code>de-voice lieutenant</code> — restrained burnt copper: procedure, control, propriety.</p>
+<p class="de-bench"><span class="de-voice partner">THE PARTNER</span> — <code>de-voice partner</code> — warm amber: attachment, care, the pull toward someone.</p>
+<p class="de-bench"><span class="de-voice boy">THE BOY</span> — <code>de-voice boy</code> — muted forget-me-not blue: the child beneath the uniform.</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;span class="de-voice lieutenant"&gt;THE LIEUTENANT&lt;/span&gt;
+&lt;span class="de-voice partner"&gt;THE PARTNER&lt;/span&gt;
+&lt;span class="de-voice boy"&gt;THE BOY&lt;/span&gt;</code></pre>
+</details>
+
+<hr />
+
+<h3>Rulings — <code>de-ruling</code></h3>
+
+<p>The bracketed ruling. Upright (never italic like Harry's checks) and coloured to match its voice. The bracket text is free-form — multiword rulings like <code>[Standing order]</code> work out of the box.</p>
+
+<p class="de-bench"><span class="de-voice lieutenant">THE LIEUTENANT</span> <span class="de-ruling">[Overruled]</span> — <code>de-ruling</code></p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;span class="de-ruling"&gt;[Overruled]&lt;/span&gt;
+&lt;span class="de-ruling"&gt;[Standing order]&lt;/span&gt;</code></pre>
+</details>
+
+<hr />
+
 <h3>Player Choices — <code>ol class="de-choices"</code></h3>
 
 <p>Standard choices are orange-red and numbered. Skill checks use a parchment card style (<code>white-check</code>). Add <code>locked</code> to a white-check for an unavailable option. High-stakes checks use <code>red-check</code>.</p>

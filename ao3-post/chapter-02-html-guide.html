@@ -157,6 +157,47 @@
 &lt;/p&gt;</code></pre>
 </details>
 
+<h3>Kim's Bench</h3>
+
+<p>A separate internal system for characters who rule on themselves instead of arguing with themselves. The <code>de-bench</code> paragraph takes a voice label and a ruling in square brackets — <em>rulings, not skill checks</em>. There are no dice, no difficulty tiers, and no success/failure colours: whatever is in the brackets is free text (<code>Overruled</code>, <code>Standing order</code>, <code>Struck</code>, or anything you invent). Never use <code>de-check</code> for a ruling.</p>
+
+<p>Three voices ship with the skin: <code>lieutenant</code> (restrained burnt copper), <code>partner</code> (warm amber), and <code>boy</code> (muted forget-me-not blue). The ruling inherits its voice's colour. Only format explicit labelled bench lines — ordinary narration stays prose.</p>
+
+<p class="de-bench">
+  <span class="de-voice partner">THE PARTNER</span>
+  <span class="de-ruling">[Entered]</span> — <em>He has not asked once. He is not going to ask. He is owed the reason anyway.</em>
+</p>
+
+<p class="de-bench">
+  <span class="de-voice lieutenant">THE LIEUTENANT</span>
+  <span class="de-ruling">[Overruled]</span> — <em>We do not open files we cannot close.</em>
+</p>
+
+<p class="de-bench">
+  <span class="de-voice boy">THE BOY</span>
+  <span class="de-ruling">[Standing order]</span> — <em>Stand straight. Hands still. Be easy to keep.</em>
+</p>
+
+<details>
+<summary>HTML</summary>
+<pre><code>&lt;!-- Kim's bench: voice label + ruling, then the thought in &lt;em&gt; --&gt;
+&lt;p class="de-bench"&gt;
+  &lt;span class="de-voice lieutenant"&gt;THE LIEUTENANT&lt;/span&gt;
+  &lt;span class="de-ruling"&gt;[Overruled]&lt;/span&gt; — &lt;em&gt;We do not open files we cannot close.&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;!-- The other voices --&gt;
+&lt;p class="de-bench"&gt;
+  &lt;span class="de-voice partner"&gt;THE PARTNER&lt;/span&gt;
+  &lt;span class="de-ruling"&gt;[Entered]&lt;/span&gt; — &lt;em&gt;Your text here.&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p class="de-bench"&gt;
+  &lt;span class="de-voice boy"&gt;THE BOY&lt;/span&gt;
+  &lt;span class="de-ruling"&gt;[Standing order]&lt;/span&gt; — &lt;em&gt;Your text here.&lt;/em&gt;
+&lt;/p&gt;</code></pre>
+</details>
+
 <h3>Player Choices</h3>
 
 <p>An ordered list. Add <code>class="selected"</code> to the chosen option and <code>class="old"</code> to options already picked in a previous scene.</p>

@@ -44,3 +44,12 @@
 
 * **Ancient Reptilian Brain (`#3A6B58`)** — murky sea-green, the void that wants you to stay in bed
 * **Limbic System (`#B33951`)** — raw bruised pink, all heartache and neurosis
+
+### Kim's Bench
+
+Rulings, not skill checks — no dice, no difficulty tiers, no success/failure colours.
+
+* **The Lieutenant (`#B45A26`)** — restrained burnt copper: Kim's bomber, made official. Procedure, control, propriety.
+* **The Partner (`#C9973B`)** — warm amber. Attachment, care, the pull toward someone.
+* **The Boy (`#8093C4`)** — muted forget-me-not blue, greyer than the intellect blues. The child beneath the uniform.
+* **Eyes / Dominic** — no colour, by design: an empty seat, not a speaking voice.
